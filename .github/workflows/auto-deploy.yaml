@@ -26,11 +26,11 @@ jobs:
         with:
           context: "{{defaultContext}}:frontend"
           push: true
-          tags: tarunshrma/frontend:v1
+          tags: tarunshrma/frontend:v1.1
       # - run: cd ../backend
       - name: Build and push backend
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:backend"
           push: true
-          tags: tarunshrma/backend:v1
+          tags: tarunshrma/backend:v1.1
