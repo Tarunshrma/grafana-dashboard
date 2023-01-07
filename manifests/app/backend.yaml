@@ -7,9 +7,7 @@ metadata:
     prometheus.io/path: /metrics
     prometheus.io/port: backendport
   labels:
-    # name: backend
     app: backend
-    # release: prometheus
   name: backend
 spec:
   replicas: 3
@@ -48,11 +46,6 @@ spec:
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  # annotations:
-  #   sidecar.jaegertracing.io/inject: "true"
-  #   prometheus.io/scrape: "true"
-  #   prometheus.io/path: /metrics
-  #   prometheus.io/port: backend
   labels:
     app: backend
     release: prometheus

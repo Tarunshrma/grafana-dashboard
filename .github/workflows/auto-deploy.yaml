@@ -34,3 +34,9 @@ jobs:
           context: "{{defaultContext}}:backend"
           push: true
           tags: tarunshrma/backend:v1.1
+      - name: Build and push trial app
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:trial"
+          push: true
+          tags: tarunshrma/trial:v1.1

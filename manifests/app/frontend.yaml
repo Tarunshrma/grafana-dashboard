@@ -46,11 +46,6 @@ spec:
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  # annotations:
-  #   sidecar.jaegertracing.io/inject: "true"
-  #   prometheus.io/scrape: "true"
-  #   prometheus.io/path: /metrics
-  #   prometheus.io/port: frontend
   labels:
     app: frontend
     release: prometheus
