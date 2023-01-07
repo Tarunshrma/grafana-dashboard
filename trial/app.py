@@ -8,9 +8,11 @@ from opentelemetry.sdk.trace.export import (
     BatchSpanProcessor,
     ConsoleSpanExporter,
 )
+from prometheus_flask_exporter.multiprocess import GunicornInternalPrometheusMetrics
 
 import logging
 import requests
+
 
 
 def initialize_tracer():
@@ -28,6 +30,8 @@ def initialize_tracer():
 
 
 app = Flask(__name__)
+metrics = GunicornInternalPrometheusMetrics(app)
+
 
 trace.set_tracer_provider(TracerProvider())
 trace.get_tracer_provider().add_span_processor(
