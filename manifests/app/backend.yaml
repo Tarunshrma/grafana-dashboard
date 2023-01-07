@@ -26,7 +26,7 @@ spec:
         image: tarunshrma/backend:v1.1
         ports:
         - name: backendport
-          containerPort: 8081
+          containerPort: 8080
           protocol: TCP
 ---
 apiVersion: v1
