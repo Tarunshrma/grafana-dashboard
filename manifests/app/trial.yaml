@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: trial
-        image: tarunshrma/trial:v1.1
+        image: tarunshrma/trial:v1.2
         ports:
         - name: trialport
           containerPort: 8080
