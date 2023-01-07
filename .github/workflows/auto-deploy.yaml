@@ -20,20 +20,21 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      # - run: cd ./frontend
+      # - Frontend App
       - name: Build and push fronend
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:frontend"
           push: true
           tags: tarunshrma/frontend:v1.1
-      # - run: cd ../backend
+      # - Baxckend App
       - name: Build and push backend
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:backend"
           push: true
-          tags: tarunshrma/backend:v1.1
+          tags: tarunshrma/backend:v1.2
+      # - Trial App    
       - name: Build and push trial app
         uses: docker/build-push-action@v3
         with:

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: tarunshrma/backend:v1.1
+        image: tarunshrma/backend:v1.2
         ports:
         - name: backendport
           containerPort: 8080
