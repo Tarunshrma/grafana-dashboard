@@ -124,10 +124,19 @@ Below are some of the SLI that indicating application is fulfilling the SLO targ
 ## Building KPIs for our plan
 Task: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
-- All Services i.e. Backend & Fronend were available more then 99.8% over a period of a month.
-- Failure requests (4XX and 5XX) were 0.02% of overall http requests over a period of a month.
-- Avg. response time was less then 500ms over a period of a month.
-- Max CPU usage was 60% while Memory never reached more then 350Mib over a period of a month.
+- All Services i.e. Backend & Fronend should be available more then 99.95% over a period of a month.
+  - **Uptime:** This KPI will determine the availablity of application.
+  - **Failed Http Requests:** This KPI will help us identifying if some of services are not responding.
+- Failure requests (4XX and 5XX) should be less then 0.05% of overall http requests over a period of a month.
+  - **Failed Http Requests:** This KPI will help us identifying if some of services are not responding.
+  - **Uptime:** We can track uptime to see if some error is coming because non availablity of a service.
+- Avg. response time should be less then 500ms over a period of a month.
+  - **Letancy:** : This KPI will determine avg. time taken to respond. 
+  - **CPU/Memory Usage:** We can track cpu and memory usage to determine if application is reaching to saturation to handle the incoming traffic.
+- CPU and Memory threshold not exceeded more then defined thresholds over a period of a month 
+  - **CPU Usage:** Avg. cpu usage of applications, it will help us determing the letancy of application.
+  - **Memory Usage:** Avg. memory usage of applications, it will help us determing the letancy of application
+
 
 ## Final Dashboard
 Task: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
@@ -141,3 +150,6 @@ Task: Create a Dashboard containing graphs that capture all the metrics of your 
 - Failed Http Request: Total http requests with status code in 4XX and 5XX
 - Success Http Request: Total http requests with status code 200
 
+## Important Links:
+- https://github.com/rycus86/prometheus_flask_exporter/tree/master/examples/sample-signals
+- https://tracing.cloudnative101.dev/docs/lab-jaeger-nodejs.html
