@@ -26,19 +26,21 @@ TASK: Create a dashboard in Grafana that shows Prometheus as a source. Take a sc
 - **SLO**
     SLO stands for Service level objectives. It is the promise or target committed to stakeholders/customers usually documented by Service level agreement(SLA).
 
-    **Monthly uptime** 
+    - **Monthly uptime** 
         Application should remain available 99.95%/month. 
-    **Request response time**
+        
+    - **Request response time**
         Avg. api letancy should be less then 1 second.
 - **SLI**
     SLI Stands for Service level indicator. It is the quantitative measure of SLO to keep check if SLOs are met or not. SLA may define panelties on missing the SLO. Thus SLIs are very critical to measure. 
 
-    **Monthly uptime**
+    - **Monthly uptime**
         Application was available 99.9% during last month.
         SLO Achieved.
-    **Request response time**
+        
+    - **Request response time**
         5% of all api's took more then 1 second to respond. 
-        SLO Failed, need to do the root cause analysis and fixed the slow api's to achieve the SLO.    
+        SLO Failed, need to do the root cause analysis and fixed the slow api's to achieve the SLO.  
 
 ## Creating SLI metrics.
 SLI indicates if an application is achieving it's desirable output. It also helps identify some potential problems that should be fixed to keep the application healthy. SLI metrics can be derived from four golden signals i.e. Lenacy, traffic, Errors & Saturation. Some examples of matrices are as below
@@ -87,7 +89,8 @@ Affected Area: Frontend app "Press Me For Bad Test" feature is breaking.
 Severity: Critial
 
 Description: When user cliks on "Press Me For Bad Test" button on frontend home page, it is causing error in "trial" app with "500: Internal Server Error". On further investigation for Jeager below error is captured
-	
+
+`	
   File "/app/app.py", line 50, in homepage
     span.set_tag("first-tag", len(res.json()))
   File "/usr/local/lib/python3.7/site-packages/requests/models.py", line 910, in json
@@ -98,6 +101,7 @@ Description: When user cliks on "Press Me For Bad Test" button on frontend home 
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
   File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
+`   
 
 For detail please check the screenshot below how to track the error on Jeager    
 
