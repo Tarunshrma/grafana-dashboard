@@ -110,10 +110,28 @@ For detail please check the screenshot below how to track the error on Jeager
 ![jeager-error-report-stack-trace](./answer-img/jeager-error-report-stack-trace.png?raw=true "Jeager Error Report Stacktrace")
 
 ## Creating SLIs and SLOs
-*TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
+Task: We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
+
+Below are some of the SLI that indicating application is fulfilling the SLO target of 99.95%/month
+
+- All Services i.e. Backend & Fronend should be available more then 99.95% over a period of a month.
+- Failure requests (4XX and 5XX) should be less then 0.05% of overall http requests over a period of a month.
+- Avg. response time should be less then 500ms over a period of a month.
+- CPU and Memory threshold not exceeded more then defined thresholds over a period of a month 
+  - CPU threshold = 70%
+  - Memory threhold = 500 Mib   
 
 ## Building KPIs for our plan
-*TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+Task: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+
+- All Services i.e. Backend & Fronend were available more then 99.8% over a period of a month.
+- Failure requests (4XX and 5XX) were 0.02% of overall http requests over a period of a month.
+- Avg. response time was less then 500ms over a period of a month.
+- Max CPU usage was 60% while Memory never reached more then 350Mib over a period of a month.
 
 ## Final Dashboard
-*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+Task: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+
+![final-dashboard](./answer-img/final-dashboard.png?raw=true "Final Dashboard")
+
+
