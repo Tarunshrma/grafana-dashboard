@@ -134,4 +134,10 @@ Task: Create a Dashboard containing graphs that capture all the metrics of your 
 
 ![final-dashboard](./answer-img/final-dashboard.png?raw=true "Final Dashboard")
 
+- Memory Usage: This panel display overall memory usage of application in default namespace
+- CPU Usage: This panel display overall cpu usage of application in default namespace
+- Average Response Time: Avg response time of all flask http requests.
+- Backend/Frontend Uptime: Applicatation uptime in hours for frontend and backend app.
+- Failed Http Request: Total http requests with status code in 4XX and 5XX
+- Success Http Request: Total http requests with status code 200
 
