@@ -23,29 +23,35 @@ TASK: Create a dashboard in Grafana that shows Prometheus as a source. Take a sc
 
 
 ## Describe SLO/SLI
-SLOs
+- **SLO**
     SLO stands for Service level objectives. It is the promise or target committed to stakeholders/customers usually documented by Service level agreement(SLA).
 
     **Monthly uptime** 
         Application should remain available 99.95%/month. 
     **Request response time**
-        Avg. api letancy should be less then 1 seconds.
-SLIs
-    SLI Stands for Service level indicator. It is the quantetative measure of SLO to keep check if SLOs are met or not. SLA may define panelties on missing the SLO. Thus SLIs are very critical to measure. 
+        Avg. api letancy should be less then 1 second.
+- **SLI**
+    SLI Stands for Service level indicator. It is the quantitative measure of SLO to keep check if SLOs are met or not. SLA may define panelties on missing the SLO. Thus SLIs are very critical to measure. 
+
     **Monthly uptime**
         Application was available 99.9% during last month.
-            SLO Achieved.
+        SLO Achieved.
     **Request response time**
-        5% of all api's took more then 1 seconds to respond. 
-            SLO Failed, need to do the root cause analysis and fixed the slow api's to achieve the SLO.    
+        5% of all api's took more then 1 second to respond. 
+        SLO Failed, need to do the root cause analysis and fixed the slow api's to achieve the SLO.    
 
 ## Creating SLI metrics.
-SLI indicates if an application is achieving it's desireable output. It also helps identifying some of potential problems that should be fixed to keep the application healthy. SLI matrics can be derived from Four golden signals i.e. Letancy, Traffic, Errors & Saturation. Some exmaples of matrices are as below: 
-    1) Letancy: Time taken by service to respond. Slow signup service can result losing the potential customer/user. e.g. **Avg. time taken by signup service is 1.5 seconds over a period of black friday sale.**
-    2) Traffic: How much load can be handled by application at any given time. During FIFA final worldcup streaming on any OTT platform should be able to handle millions of concurrent streaming request. **Popular OTT Platform succesfully handled 50 Million Concurrent Request During FIFA World Cup Final**
-    3) Errors: Number of failed requests or unexpected result for a request. e.g. HTTP 503 status signals temporary overloading or maintenance of the server. **Only 0.01% of ticket booking service resulted error during Justin Bieber concert. It was within agreeable range of 99.95%**
-    4) Saturation: This indicates the resources consumption by application services. More saturated services means application may become slow due to resource scarcity. Some examples are CPU utilization, Memory Usage, I/O rates for DB. **Maximum memory consumption for GPU Intensive game app on mobile device should not exceeds 2GB**
-    5) Resilient: This is another critical matrix to track, how early an application/system could recover from a failed state. **Pod should recreate within 2 seconds in case of failure to fulfill desired replica requests configured in menifast file**    
+SLI indicates if an application is achieving it's desirable output. It also helps identify some potential problems that should be fixed to keep the application healthy. SLI metrics can be derived from four golden signals i.e. Lenacy, traffic, Errors & Saturation. Some examples of matrices are as below
+
+- **Letancy**: Time taken by service to respond. Slow signup service can result losing the potential customer/user. e.g. `Avg. time taken by signup service is 1.5 seconds over a period of black friday sale.`
+
+- **Traffic**: How much load can be handled by application at any given time. During FIFA final worldcup streaming on any OTT platform should be able to handle millions of concurrent streaming request. `Popular OTT Platform successfully handled 50 Million Concurrent Request During FIFA World Cup Final`
+
+- **Errors**: Number of failed requests or unexpected result for a request. e.g. HTTP 503 status signals temporary overloading or maintenance of the server. `Only 0.01% of ticket booking service resulted error during Justin Bieber concert. It was within the agreeable range of 99.95%`
+ 
+- **Saturation**: This indicates the resource consumption by application services. More saturated services mean applications may become slow due to resource scarcity. Some examples are CPU utilization, memory use, I/O rates for DB. `Maximum memory consumption for GPU Intensive game app on mobile device should not a exceed 2GB`
+ 
+- **Resilient**: This is another critical matrix to track, how early an application/system could recover from a failed state. `Pod should recreate within 2 seconds in case of failure to fulfill desired replica requests configured in menifast file`
 
 ## Create a Dashboard to measure our SLIs
 Task: Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
