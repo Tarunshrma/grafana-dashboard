@@ -25,7 +25,7 @@ def initialize_tracer():
     logging.basicConfig(format="%(message)s", level=logging.DEBUG)
 
     open_tracing_config = {"sampler": {"type": "const", "param": 1}, "logging": True}
-    tracer_config = Config(open_tracing_config, service_name="trial")
+    tracer_config = Config(open_tracing_config, service_name="backend")
 
     return tracer_config.initialize_tracer()
 
